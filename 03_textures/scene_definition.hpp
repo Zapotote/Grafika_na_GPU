@@ -80,6 +80,7 @@ inline SimpleScene createMonkeyScene(MaterialFactory &aMaterialFactory, Geometry
 				{ "material.diffuse", glm::vec3(1.0, 0.5, 0.31) },
 				{ "material.shininess", 32.0f },
 				{ "material.specular", glm::vec3(0.5, 0.5, 0.5) },
+{ "u_textureSampler1", TextureInfo("pebbles/Pebbles_003_COLOR.jpg") }
 			}
 			)
 		);
