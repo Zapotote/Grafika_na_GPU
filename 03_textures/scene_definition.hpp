@@ -31,7 +31,7 @@ inline SimpleScene createTexturedCubeScene(MaterialFactory &aMaterialFactory, Ge
 			"texture_blend",
 			RenderStyle::Solid,
 			{
-				{ "u_textureSampler1", TextureInfo("brick_wall/Brick_Wall_012_COLOR.jpg") },
+				{ "u_textureSampler1", TextureInfo("brick_wall/Brick_Wall_COLOR.jpg") },
 				{ "u_textureSampler2", TextureInfo("pebbles/Pebbles_003_COLOR.jpg") }
 			}
 			)
