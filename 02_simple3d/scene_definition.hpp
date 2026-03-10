@@ -24,6 +24,7 @@ inline SimpleScene createCubeScene(MaterialFactory &aMaterialFactory, GeometryFa
 			RenderStyle::Solid,
 			{
 				{ "u_solidColor", glm::vec4(1.0f, 0.5f, 0.0f, 1.0f)}
+				//{ "u_solidColor", glm::vec4(1.0f, 0.5f, 0.5f, 1.0f)}
 			})
 		);
 	cube->prepareRenderData(aMaterialFactory, aGeometryFactory);

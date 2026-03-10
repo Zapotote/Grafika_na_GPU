@@ -12,6 +12,7 @@ public:
 	void initialize() {
 		GL_CHECK(glEnable(GL_DEPTH_TEST));
 		GL_CHECK(glClearColor(0.2f, 0.3f, 0.3f, 1.0f));
+		//GL_CHECK(glClearColor(0.2f, 0.3f, 1.0f, 1.0f));
 	}
 
 	template<typename TScene, typename TCamera>
