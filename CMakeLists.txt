@@ -15,12 +15,12 @@ find_package(OpenGL REQUIRED)
 if(WIN32)
 	# Attempt to find the GLFW root directory
 	find_path(GLFW_ROOT_DIR NAMES include/GLFW/glfw3.h
-			PATHS
+		PATHS
 			"${CMAKE_CURRENT_SOURCE_DIR}/glfw-3.4.bin.WIN64"
 			"${CMAKE_CURRENT_SOURCE_DIR}/glfw-3.4"
 			"${CMAKE_CURRENT_SOURCE_DIR}/../glfw-3.4.bin.WIN64"
 			"${CMAKE_CURRENT_SOURCE_DIR}/../glfw-3.4"
-			NO_DEFAULT_PATH) # Avoid searching in default paths
+		NO_DEFAULT_PATH) # Avoid searching in default paths
 
 	if(GLFW_ROOT_DIR)
 		# Determine the appropriate library directory based on the Visual Studio version
@@ -57,10 +57,10 @@ if(WIN32)
 	endif()
 
 	find_path(GLM_ROOT_DIR NAMES glm/glm.hpp
-			PATHS
+		PATHS
 			"${CMAKE_CURRENT_SOURCE_DIR}/glm-1.0.1"
 			"${CMAKE_CURRENT_SOURCE_DIR}/../glm-1.0.1"
-			NO_DEFAULT_PATH)
+		NO_DEFAULT_PATH)
 
 	if (NOT GLM_ROOT_DIR)
 		message(FATAL_ERROR "GLM root directory not found.")
@@ -78,15 +78,15 @@ endif()
 
 
 add_library(utils
-		utils/ogl_material_factory.cpp
-		utils/ogl_geometry_factory.cpp
-		utils/ogl_geometry_construction.cpp
-		utils/obj_file_loading.cpp
-)
+	utils/ogl_material_factory.cpp
+	utils/ogl_geometry_factory.cpp
+	utils/ogl_geometry_construction.cpp
+	utils/obj_file_loading.cpp
+	)
 target_link_libraries(utils glm::glm glfw OpenGL::GL)
 target_include_directories(utils PUBLIC
-		${CMAKE_CURRENT_SOURCE_DIR}/glad/include
-		${CMAKE_CURRENT_SOURCE_DIR}
+	${CMAKE_CURRENT_SOURCE_DIR}/glad/include
+	${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 
@@ -94,3 +94,4 @@ target_include_directories(utils PUBLIC
 add_subdirectory(01_triangle)
 add_subdirectory(02_simple3d)
 add_subdirectory(03_textures)
+add_subdirectory(04_deffered)
